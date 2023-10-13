@@ -49,7 +49,7 @@
                 (blur)="updateItem(item)" autofocus="autofocus" />
               <div class="todo-item-title" *ngIf="item != selectedItem" [ngClass]="{ 'done-todo': item.done }"
                 (click)="editItem(item, 'itemTitle' + i)" class="form-control item-input-control">
-                <span>{{ item.title }}</span>
+                <span>{{ item.title }} {{ item.color }}</span>
               </div>
             </div>
             <div class="todo-item-commands">
