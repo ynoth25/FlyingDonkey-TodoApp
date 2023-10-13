@@ -14,6 +14,8 @@ public record UpdateTodoItemDetailCommand : IRequest
 
     public PriorityLevel Priority { get; init; }
 
+    public string? Color { get; init; }
+
     public string? Note { get; init; }
 }
 
@@ -37,6 +39,7 @@ public class UpdateTodoItemDetailCommandHandler : IRequestHandler<UpdateTodoItem
         }
 
         entity.ListId = request.ListId;
+        entity.Color = request.Color;
         entity.Priority = request.Priority;
         entity.Note = request.Note;
 
