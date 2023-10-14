@@ -57,6 +57,10 @@ namespace FlyingDonkey_TodoApp.Infrastructure.Persistence.Migrations
                     b.Property<DateTime?>("Reminder")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Color")
+                        .HasMaxLength(200)
+                        .HasColumnType("nvarchar(200)");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(200)

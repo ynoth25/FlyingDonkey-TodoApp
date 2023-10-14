@@ -38,7 +38,7 @@
         </button>
       </div>
       <ul id="todo-items" class="list-group mb-2">
-        <li class="list-group-item" *ngFor="let item of selectedList.items; index as i">
+        <li class="list-group-item" *ngFor="let item of selectedList.items; index as i" [style.backgroundColor]="item.color">
           <div class="d-flex">
             <div class="todo-item-checkbox">
               <input type="checkbox" [(ngModel)]="item.done" (change)="updateItem(item)" />
@@ -121,6 +121,12 @@
         <label for="priority">Priority</label>
         <select class="form-control" [(ngModel)]="itemDetailsEditor.priority">
           <option [ngValue]="level.value" *ngFor="let level of priorityLevels">{{ level.name }}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="priority">Color</label>
+        <select class="form-control" [(ngModel)]="itemDetailsEditor.color">
+          <option [ngValue]="color.value" *ngFor="let color of toDoItemColors">{{ color.name }}</option>
         </select>
       </div>
       <div class="form-group">
