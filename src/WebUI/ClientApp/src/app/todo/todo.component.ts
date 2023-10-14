@@ -24,14 +24,18 @@ export class TodoComponent implements OnInit {
   listOptionsModalRef: BsModalRef;
   deleteListModalRef: BsModalRef;
   itemDetailsModalRef: BsModalRef;
-  public colors = [
+  public toDoItemColors = [
     {
       name: 'red',
       value: '#C70039 '
     },
-     {
-      name: 'red',
+    {
+      name: 'yellow',
       value: '#FFC300 '
+    },
+    {
+      name: 'blue',
+      value: '#004cc7'
     }
   ];
 
@@ -160,6 +164,7 @@ export class TodoComponent implements OnInit {
 
         this.selectedItem.priority = this.itemDetailsEditor.priority;
         this.selectedItem.note = this.itemDetailsEditor.note;
+        this.selectedItem.color = this.itemDetailsEditor.color;
         this.itemDetailsModalRef.hide();
         this.itemDetailsEditor = {};
       },
