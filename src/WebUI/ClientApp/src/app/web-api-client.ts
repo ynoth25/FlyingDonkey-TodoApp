@@ -748,6 +748,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
     id?: number;
     listId?: number;
     title?: string | undefined;
+    color?: string | undefined;
     done?: boolean;
 
     constructor(data?: ITodoItemBriefDto) {
@@ -764,6 +765,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
             this.id = _data["id"];
             this.listId = _data["listId"];
             this.title = _data["title"];
+            this.color = _data["color"];
             this.done = _data["done"];
         }
     }
@@ -780,6 +782,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
         data["id"] = this.id;
         data["listId"] = this.listId;
         data["title"] = this.title;
+        data["color"] = this.color;
         data["done"] = this.done;
         return data;
     }
@@ -789,6 +792,7 @@ export interface ITodoItemBriefDto {
     id?: number;
     listId?: number;
     title?: string | undefined;
+    color?: string | undefined;
     done?: boolean;
 }
 
@@ -944,6 +948,7 @@ export class UpdateTodoItemDetailCommand implements IUpdateTodoItemDetailCommand
     id?: number;
     listId?: number;
     priority?: PriorityLevel;
+    color?: string | undefined;
     note?: string | undefined;
 
     constructor(data?: IUpdateTodoItemDetailCommand) {
@@ -960,6 +965,7 @@ export class UpdateTodoItemDetailCommand implements IUpdateTodoItemDetailCommand
             this.id = _data["id"];
             this.listId = _data["listId"];
             this.priority = _data["priority"];
+            this.color = _data["color"];
             this.note = _data["note"];
         }
     }
@@ -976,6 +982,7 @@ export class UpdateTodoItemDetailCommand implements IUpdateTodoItemDetailCommand
         data["id"] = this.id;
         data["listId"] = this.listId;
         data["priority"] = this.priority;
+        data["color"] = this.color;
         data["note"] = this.note;
         return data;
     }
@@ -985,6 +992,7 @@ export interface IUpdateTodoItemDetailCommand {
     id?: number;
     listId?: number;
     priority?: PriorityLevel;
+    color?: string | undefined;
     note?: string | undefined;
 }
 
@@ -1151,6 +1159,7 @@ export class TodoItemDto implements ITodoItemDto {
     id?: number;
     listId?: number;
     title?: string | undefined;
+    color?: string | undefined;
     done?: boolean;
     priority?: number;
     note?: string | undefined;
@@ -1169,6 +1178,7 @@ export class TodoItemDto implements ITodoItemDto {
             this.id = _data["id"];
             this.listId = _data["listId"];
             this.title = _data["title"];
+            this.color = _data["color"];
             this.done = _data["done"];
             this.priority = _data["priority"];
             this.note = _data["note"];
@@ -1187,6 +1197,7 @@ export class TodoItemDto implements ITodoItemDto {
         data["id"] = this.id;
         data["listId"] = this.listId;
         data["title"] = this.title;
+        data["color"] = this.color;
         data["done"] = this.done;
         data["priority"] = this.priority;
         data["note"] = this.note;
@@ -1198,6 +1209,7 @@ export interface ITodoItemDto {
     id?: number;
     listId?: number;
     title?: string | undefined;
+    color?: string | undefined;
     done?: boolean;
     priority?: number;
     note?: string | undefined;
