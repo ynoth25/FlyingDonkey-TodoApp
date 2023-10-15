@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@iplab/ngx-color-picker": "^15.0.2"
+  }
+}

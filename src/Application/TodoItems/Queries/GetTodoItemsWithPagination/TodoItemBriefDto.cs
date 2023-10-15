@@ -11,6 +11,8 @@ public class TodoItemBriefDto : IMapFrom<TodoItem>
 
     public string? Title { get; init; }
 
+    public string? Color { get; init; }
+
     public bool Done { get; init; }
 
     public DateTime? DeletedAt { get; set; }
