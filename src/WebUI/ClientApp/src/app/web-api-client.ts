@@ -750,6 +750,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
     title?: string | undefined;
     color?: string | undefined;
     done?: boolean;
+    deletedAt?: Date | undefined;
 
     constructor(data?: ITodoItemBriefDto) {
         if (data) {
@@ -767,6 +768,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
             this.title = _data["title"];
             this.color = _data["color"];
             this.done = _data["done"];
+            this.deletedAt = _data["deletedAt"] ? new Date(_data["deletedAt"].toString()) : <any>undefined;
         }
     }
 
@@ -784,6 +786,7 @@ export class TodoItemBriefDto implements ITodoItemBriefDto {
         data["title"] = this.title;
         data["color"] = this.color;
         data["done"] = this.done;
+        data["deletedAt"] = this.deletedAt ? this.deletedAt.toISOString() : <any>undefined;
         return data;
     }
 }
@@ -794,6 +797,7 @@ export interface ITodoItemBriefDto {
     title?: string | undefined;
     color?: string | undefined;
     done?: boolean;
+    deletedAt?: Date | undefined;
 }
 
 export class CreateTodoItemCommand implements ICreateTodoItemCommand {

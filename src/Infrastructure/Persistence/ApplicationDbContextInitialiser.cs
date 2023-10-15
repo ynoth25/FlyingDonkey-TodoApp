@@ -84,7 +84,7 @@ public class ApplicationDbContextInitialiser
                     new TodoItem { Title = "Make a todo listzz 📃", Color = "RED" },
                     new TodoItem { Title = "Check off the first itemzz ✅", Color = "RED" },
                     new TodoItem { Title = "Realise you've already done two things on the listzz! 🤯", Color = "RED"},
-                    new TodoItem { Title = "Reward yourself with a nice, long napzz 🏆", Color = "RED" },
+                    new TodoItem { Title = "Reward yourself with a nice, long napzz 🏆", Color = "RED", DeletedAt = DateTime.Today },
                 }
             });
 

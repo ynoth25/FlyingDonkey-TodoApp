@@ -532,6 +532,11 @@
           },
           "done": {
             "type": "boolean"
+          },
+          "deletedAt": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
           }
         }
       },

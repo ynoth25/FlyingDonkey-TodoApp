@@ -16,5 +16,7 @@ public class TodoListDto : IMapFrom<TodoList>
 
     public string? Colour { get; init; }
 
+    public DateTime? DeletedAt { get; init; }
+
     public IReadOnlyCollection<TodoItemDto> Items { get; init; }
 }
